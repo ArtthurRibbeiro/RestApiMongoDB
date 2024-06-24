@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import art.atualiz.mongoproject.models.butecoModel;
 import art.atualiz.mongoproject.services.IButecoService;
 
+
 @RestController
 @RequestMapping("/buteco")
 public class ButecoController {
@@ -21,22 +22,22 @@ public class ButecoController {
     IButecoService service;
 
     
- @GetMapping("/buteco")
+ @GetMapping("")
  public List<butecoModel> findAll() {
     return service.listarTodos();
  }
 
- @GetMapping("/buteco/{id}")
+ @GetMapping("/{id}")
  public butecoModel findById(@PathVariable("id") String id) {
      return service.buscarPorId(id);
  }
 
- @PostMapping("/buteco")
+ @PostMapping("")
  public butecoModel criarButeco(butecoModel buteco){
     return service.cadastrar(buteco);
  }
 
-@PutMapping("/buteco")
+@PutMapping("")
 public butecoModel atualizarButeco( butecoModel buteco){
     return service.atualizar(buteco);
 }

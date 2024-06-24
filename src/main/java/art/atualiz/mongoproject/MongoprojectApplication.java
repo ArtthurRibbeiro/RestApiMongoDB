@@ -18,11 +18,11 @@ public class MongoprojectApplication {
  public OpenAPI customOpenAPI() {
  return new OpenAPI()
  .info(new Info()
- .title("Servidor de tarefas")
+ .title("Cadastro de Butecos da cidade")
  .version("1.0.0")
  .contact(new 
-Contact().email("rdouro@salesiano.br").name("Rômulo F. Douro"))
- .description("Exemplo de REST API para tarefas")
+Contact().email("seila@salesiano.br").name("Jacinto Pinto"))
+ .description("Api para cadastro e visualizaçao dos butecos da cidade")
  );
  }
 
